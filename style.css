@@ -1,0 +1,73 @@
+
+:root {
+  --wine: #8f1018;
+  --red: #b51d25;
+  --gold: #e7b94f;
+  --cream: #fff8ef;
+  --ink: #392321;
+  --pink: #f9e4df;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; color: var(--ink);
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #fff8ef, #ffe9e2);
+  line-height: 1.65;
+}
+header {
+  min-height: 190px; display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 28px 18px; color: #701016;
+  background: linear-gradient(90deg, rgba(255,255,255,.9), rgba(255,247,231,.84)),
+              url("images/hero-vyshyvanka.jpg") center 42%/cover;
+  border-bottom: 7px double var(--red);
+}
+header h1 { margin: 0; font-family: Georgia, serif; font-size: clamp(2.4rem, 6vw, 4.5rem); }
+header p { margin: 4px 0 0; font-size: 1.08rem; font-weight: 600; }
+nav {
+  display: flex; justify-content: center; flex-wrap: wrap; gap: 5px;
+  padding: 10px; background: var(--wine); box-shadow: 0 4px 12px #5d101033;
+}
+nav a {
+  color: white; text-decoration: none; font-weight: 700;
+  padding: 10px 18px; border-radius: 24px; transition: .2s;
+}
+nav a:hover, nav a.active { background: #c43b36; }
+main { width: min(1100px, 92%); margin: 32px auto 48px; }
+h2 { color: var(--wine); font-family: Georgia, serif; font-size: clamp(1.8rem, 4vw, 2.5rem); }
+h3 { color: #9b2024; }
+.hero, .feature, .two-col {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px; align-items: center;
+}
+.hero img, .feature img, .two-col img, .wide-image {
+  width: 100%; border-radius: 18px; box-shadow: 0 8px 22px #5b201b25;
+  border: 5px solid white; object-fit: cover;
+}
+.hero img { min-height: 280px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 18px; }
+.card {
+  background: white; border: 1px solid #f0c8bd; border-radius: 18px;
+  padding: 18px; box-shadow: 0 6px 18px #5b201b12;
+}
+.card img { width: 100%; height: 150px; object-fit: cover; border-radius: 12px; }
+.note {
+  background: #ffe2d8; border-left: 6px solid var(--red);
+  padding: 16px 20px; border-radius: 12px; margin: 22px 0;
+}
+.button {
+  display: inline-block; background: var(--wine); color: white; text-decoration: none;
+  padding: 11px 20px; border-radius: 25px; font-weight: 700; margin-top: 8px;
+}
+.button:hover { background: #bd2b30; }
+footer {
+  text-align: center; padding: 22px; color: white; background: var(--wine);
+  border-top: 6px double var(--gold);
+}
+footer span { color: #ffd66f; }
+.caption { color: #76524d; font-size: .92rem; }
+ul { padding-left: 22px; }
+@media (max-width: 700px) {
+  .hero, .feature, .two-col { grid-template-columns: 1fr; }
+  header { min-height: 150px; }
+  nav a { padding: 8px 12px; }
+}
